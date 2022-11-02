@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>
+        var bike = null;
+        var timer = null;
+        
+        function init(){
+            bike = document.getElementById('car')
+            bike.style.position="relative";
+            bike.style.left = '20px';
+        }
+
+        function start(){
+            bike.style.left = parseInt(bike.style.left)+ 30 +'px'
+            timer = setTimeout(start,200)
+            x = parseInt(bike.style.left)
+            if(x>= 1150){
+                document.getElementById("red").innerHTML="Danger";
+                clearTimeout(timer)
+            }
+            
+        }
+        
+        function stop(){
+            clearTimeout(timer)
+        }
+        
+        function reset(){
+            clearTimeout(timer)
+            init();
+             document.getElementById("red").innerHTML="";
+
+        }
+    </script>
+
+
+</head>
+    <body onload="init()">
+         <div style="float:left;width: 200px;height: 100px;">
+            <img id="car" src="Bike.png" width="150" height="100">  
+            <div> 
+                <br>
+                <button onclick="start()" style="background-color: blue">Start</button>
+                <button onclick="stop()">Stop</button>
+                <button onclick="reset()">reset</button>
+            </div>       
+        </div>
+        <div style="background-color: blue; float: right;width:30px;height:600px"></div>
+        <div id="red" style="background-color: red;color: white;float:right;font-size:30px;margin-top:300px"></div>
+
+        
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="E6.js"></script>
+    <link rel="stylesheet" href="E6.css"
+</head>
+<body>
+    <div id="bbox" style="margin: 0 auto">
+   <div id="box" style="margin:0 auto"><br><br><br><br><br>WELCOME TEXT</div><br><br>
+   Background Color : <input type="color" id="bg" onchange="change()">
+   <br><br>
+   Text Color : <input type="color" id="text" onchange="change()">
+   <br><br>
+   Text Size : <select id = "size" onchange="change()">
+    <option value="18">18</option> 
+    <option value="20" selected>20</option>
+    <option value="22">22</option> 
+    <option value="24">24</option>  
+   </select><br><br>
+   Box width: <input type="text" id="width" onkeyup="change()">
+   <br><br>
+   Box Height: <input type="text" id="height" onkeyup="change()">
+   <br><br>
+   <div>
+    <input type="range" min="1" max="100" value="50" id="range" onmouseup="change()">
+    <br><br>
+    Border Radius
+   </div>
+
+</div>
+</body>
+</html>

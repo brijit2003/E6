@@ -1,0 +1,15 @@
+#bbox{
+    background-color: grey;
+    padding: 20px;
+    height: 600px;
+    width: 600px;
+}
+#box{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 1px solid blue;
+    text-align: center;
+    align-items: center;
+
+}
